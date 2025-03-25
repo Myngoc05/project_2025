@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>CatPhotoApp</title>
+  </head>
+  <body>
+    <main>
+      <h1>CatPhotoApp</h1>
+      <section>
+        <h2>Cat Photos</h2>
+     
+        <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg" target="_blank">cute cats</a> online!</p>
+
+        <!-- <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back">
+	<p>Đây là một ảnh đơn thuẩn</p> -->
+
+        <!-- thuộc tính alt để cung cấp vb mô tả hình ảnh, giúp screen reader hỗ trợ khiếm thị và vb thay thế nếu ảnh không tải được-->
+
+        <p> See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery</p>
+	<!-- nếu như lệnh trên khi người dùng nhắn vào link thì 1 tab mới sẽ đc mở -->
+	<!-- target ="_blank" để xd nơi mở tài liệu liên kết, và mở bằng 1 cửa sổ mới -->
+
+        <a  href="https://freecatphotoapp.com" target="_blank"> <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back"></a>
+
+	<!-- bạn đã sử dụng thẻ liên kết (<a>) để biến văn bản thành một liên kết. Các loại nội dung khác cũng có thể được biến thành liên kết bằng cách bao bọc chúng trong thẻ <a>. -->
+
+        <p>Nếu nhấp vào ảnh này sẽ chuyển qua một trang khác</p>
+
+      </section> 
+      <!--thẻ <section> được sử dụng để xác định các phần trong tài liệu, chẳng hạn như             	(semantic), giúp cải thiện SEO và khả năng truy cập.-->  
+       
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+	    <!-- ul là 1 ds ko thứ tự unordered list-->
+	        <li>cat nip</li>
+	        <li>laser pointers</li>
+	        <li>lasagna</li>
+	      </ul>
+	      <figure>
+	       <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+	       <figcaption>Cats <em>love</em> lasagna</figcaption>
+	      </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cat.</figcaption>
+        </figure>
+	      <!-- bạn sử dụng phần tử <figure> để nhóm một hình ảnh và chú thích lại với nhau. figcaption để mô tả ảnh -->
+      </section>   
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdour cat?</legend>
+            <label>
+              <input id="indoor" checked type="radio" name="indoor-outdoor" value="indoor"> Indoor
+            </label>
+            <label>
+              <input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>What is your cat's personality?</legend>
+            <input id="loving" checked type="checkbox" name="personality" value="loving"> <label for="loving"> Loving</label> 
+            <input id="lazy" type="checkbox" name="personality" value="lazy"><label for="lazy"> Lazy</label>
+            <input id="energetic" name="personality" type="checkbox" value="energetic"><label for="energetic">Energetic</label>
+          </fieldset>
+          <!-- radio là tạo nút chọn (tạo ra radio button)
+           checked giúp nút được chọn mặc định
+           <fieldset>: Nhóm các input lại với nhau, tạo một khung bao quanh.
+           <legend>: Đặt tiêu đề cho nhóm input đó, giúp tăng tính rõ ràng.
+           <label>: Thẻ <label> giúp mô tả input. Khi người dùng bấm vào chữ "Loving", ô checkbox cũng sẽ được chọn.
+           Thuộc tính for="loving" liên kết với id="loving" của checkbox.
+           <value>: Giá trị của ô checkbox. Khi checkbox được chọn, giá trị này sẽ được gửi đến server (nếu có form).
+           Ví dụ: Nếu chọn checkbox "Loving", dữ liệu gửi đi sẽ là personality=loving.-->
+
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>  
+          <button type="submit">Submit</button>
+          <!--Để ngăn người dùng gửi biểu mẫu khi thiếu thông tin cần thiết, bạn cần thêm thuộc tính required-->
+        </form>
+      </section>
+   	</main>
+      <footer> <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p> </footer>
+      <!-- footer là phần chân tài liệu chứa thông tin tác giả, sđt, contact... -->
+    <!-- các phần tử lồng nhau cách nhau 2 khoảng trắng-->
+  </body>
+</html>
